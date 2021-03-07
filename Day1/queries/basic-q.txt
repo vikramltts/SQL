@@ -1,0 +1,35 @@
+1. Display the name of movies, movie type is starts with Drama.
+Query-SELECT moviename,movieType FROM movie where movieType="Drama%";
+
+2. Display the movies acted by actor Ayushmann.
+Query-SELECT moviename FROM movie where HeroName="Ayushmann";
+
+3. Display the count of movies, having length above 18.
+Query- SELECT count(*) from movie where Length>18;
+
+4. Display the movie having minimum length.
+Query-SELECT MovieName From movie where Length=(Select min(Length) from movie);
+
+5. Display all the details of movie, the language that first name starts with ‘T’.
+Query- SELECT * from movie where Language like "T%";
+
+6. Display the movie name, hero name, heroine name whose having maximum length.
+Query- SELECT MOvieName, HeroName , Heroine from movie where Length = (SELECT max(Length) from movie);
+
+7. Display the movie name, hero name, heroine name the movie released after 15 march 2018.
+Query-SELECT movieName from movie where ReleasedDate>"2018-03-15";
+
+8. Display the count of thriller movies.
+Query-SELECT count(*) from movie where MovieType like "%Thriller";
+
+9. Display the count of movies whose released before 15 march 2018
+Query- SELECT * from movie where ReleasedDate<"2018-03-15";
+
+10. Display the release date of the movie name ‘Zero’.
+Query- SELECT ReleasedDate from movie where MovieName="Zero";
+
+11.Display the actor name that acted with ‘Amy’.
+Query-SELECT HeroName from movie where Heroine="Amy";
+
+12.Display the Count of maximum movies released in a month of October.
+Query-SELECT * from movie where monthname(ReleasedDate)="october";
