@@ -15,3 +15,30 @@ output :
 	The Villain
   
   
+  2. USE `activity1`;
+DROP procedure IF EXISTS `new_procedure1`;
+
+DELIMITER $$
+USE `activity1`$$
+CREATE PROCEDURE `new_procedure1` ()
+BEGIN
+select * from production;
+
+END$$
+
+DELIMITER ;
+
+
+
+3. USE `activity1`;
+DROP procedure IF EXISTS `getDetails`;
+
+DELIMITER $$
+USE `activity1`$$
+CREATE PROCEDURE `getDetails` ()
+BEGIN
+ select moviename from movie where language like "h%";
+END$$
+
+DELIMITER ;
+  
